@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doña Milanesa - Comida Casera Tradicional</title>
+    <meta name="description" content="Las mejores milanesas de Buenos Aires desde 1985">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="estiloss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+        <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="proyecto_final.html">
+                <img src="helado2.jpg" alt="Doña Milanesa" width="40" class="me-2 rounded-circle">
+                <span>Doña <span class="text-warning">Milanesa</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="javascript:void(0)">
+                            <i class="bi bi-house-door me-1"></i>Inicio </a>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+    <a class="nav-link" href="menu.html">
+        <i class="bi bi-cart3 me-1"></i>menu</a>
+        <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">
+                            <i class="bi bi-telephone me-1"></i>histroria
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+    <a class="nav-link" href="contacto.html">
+        <i class="bi bi-cart3 me-1"></i>contacto</a>
+
+                    
+                            <li class="nav-item ms-lg-3">
+    <a class="btn btn-outline-warning rounded-pill px-3" href="pedido.html">
+        <i class="bi bi-cart3 me-1"></i>Pedir Ahora
+    </a>
+</li>
+
+                        </a>
+
+
+                    </li>
+                </ul>
+                 <!-- En tu navbar (donde ya tienes el search) -->
+<form class="d-flex" role="search" id="searchForm">
+    <input class="form-control me-2" type="search" 
+           placeholder="Buscar productos..." 
+           aria-label="Search"
+           id="mainSearchInput">
+    <button class="btn btn-outline-success" type="submit">Buscar</button>
+</form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="milapro.jfif" class="d-block w-100" alt="Milanesas recién hechas">
+                    <div class="carousel-caption">
+                        <h1 class="display-4">Auténtica Comida Casera</h1>
+                        <p class="lead">Desde 1985 llevando el sabor de tu infancia</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="logoo.jfif" class="d-block w-100" alt="Promoción especial">
+                    <div class="carousel-caption">
+                        <h1 class="display-4">Martes de Milanesas</h1>
+                        <p class="lead">2x1 en todas nuestras especialidades</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="descarga1.jfif" class="d-block w-100" alt="Nuestro local">
+                    <div class="carousel-caption">
+                        <h1 class="display-4">Visítanos</h1>
+                        <p class="lead">patio de comidas torres mall Av.arce,La paz bolivi</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="welcomeToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="5000">
+            <div class="toast-header bg-warning">
+                <strong class="me-auto"><i class="bi bi-emoji-heart-eyes me-2"></i>Doña Milanesa</strong>
+                <small>Ahora</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body bg-light">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-star-fill text-warning me-2"></i>
+                    <strong>¡Bienvenido!</strong> Disfruta 20% de descuento hoy con el código: <span class="text-danger">BIENVENIDA</span>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Especialidades Mejoradas -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Nuestras Especialidades</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 card-especialidad">
+                        <img src="napo.jpeg" class="card-img-top" alt="Milanesa Clásica">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h3 class="card-title">Milanesa napolitana</h3>
+                                <span class="badge-destacado">Más pedida</span>
+                            </div>
+                            <p class="card-text">Carne de res empanada con nuestra receta tradicional, acompañada de limón fresco y perejil.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <span class="precio">35bs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   <div class="col-md-4">
+                    <div class="card h-100 card-especialidad">
+                        <img src="cro.jpeg" class="card-img-top" alt="Milanesa Clásica">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h3 class="card-title">Milanesa crocante</h3>
+                                
+                            </div>
+                            <p class="card-text">milanesa clásica con papas fritas, ensalada de lechuga y tomate,arroz de lo mejor.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <span class="precio">15bs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   <div class="col-md-4">
+                    <div class="card h-100 card-especialidad">
+                        <img src="hambur.jpeg" class="card-img-top" alt="Milanesa Clásica">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h3 class="card-title">hamburguesa especial</h3>
+                                
+                            </div>
+                            <p class="card-text">pan,carne,ensalada papas fritas,lechuga,tocino</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <span class="precio">40bs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                   <div class="col-md-4">
+                    <div class="card h-100 card-especialidad">
+                        <img src="salchipapa.jpeg" class="card-img-top" alt="Milanesa Clásica">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <h3 class="card-title">salchipapa</h3>
+                                
+                            </div>
+                            <p class="card-text">nuestra salchipapa acompañada de salchicha, papas fritas salsas a gusto</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <span class="precio">30bs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 card-especialidad">
+                        <img src="trancapecho.jpeg" class="card-img-top" alt="Milanesa Napolitana">
+                        <div class="card-body">
+                            <h3 class="card-title">trancapecho</h3>
+                            <p class="card-text">nuestro delicioso trancapecho que lleva carne,huevo,cebolla.,tomate,locoto,arroz y pan</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                </div>
+                                <span class="precio">20bs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 card-especialidad">
+                        <img src="salchipipoca.jpeg" class="card-img-top" alt="Milanesa de Pollo">
+                        <div class="card-body">
+                            <h3 class="card-title">salchipipoca</h3>
+                            <p class="card-text">nuestra deliciosa salchipipoca que contiene salchicha,papas fritas,pipocas de pollo de lo mejor</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                </div>
+                                <span class="precio">50bs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-warning btn-lg px-4 py-2 rounded-pill">
+                    <i class="bi bi-menu-button me-2"></i>Ver Menú Completo
+                </a>
+            </div>
+        </div>
+    </section>
+ <!-- Historia -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Nuestra Historia</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="Doñami1.jpg" class="img-fluid rounded shadow mb-4" alt="Local original de Doña Milanesa" loading="lazy"  width="500px">
+            </div>
+            <div class="col-lg-6">
+                <div class="accordion" id="historiaAccordion">
+                    <!-- Ítem 1 - Los Inicios -->
+                    <div class="accordion-item mb-3 border-0 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false">
+                                <i class="bi bi-house-door me-2"></i> Los Inicios (1985)
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#historiaAccordion">
+                            <div class="accordion-body">
+                                <p>Doña Milanesa comenzó como un pequeño local familiar en el barrio de San Telmo. Lo que empezó como una forma de compartir nuestras recetas tradicionales, pronto se convirtió en un referente de la comida casera en Buenos Aires.</p>
+                                <img src="mila2.jfif" alt="Local original en los 80s" class="img-fluid rounded mt-2" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ítem 2 - Nuestra Filosofía -->
+                    <div class="accordion-item mb-3 border-0 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
+                                <i class="bi bi-heart me-2"></i> Filosofía Culinaria
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#historiaAccordion">
+                            <div class="accordion-body">
+                                <p>Mantenemos el mismo espíritu desde el primer día: ingredientes frescos, preparación artesanal y el sabor de siempre. Cada milanesa lleva el amor y la dedicación que nos caracteriza.</p>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-warning me-2"></i> Carnes seleccionadas</li>
+                                    <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-warning me-2"></i> Pan rallado artesanal</li>
+                                    <li class="list-group-item border-0"><i class="bi bi-check-circle-fill text-warning me-2"></i> Receta familiar secreta</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ítem 3 - Reconocimientos -->
+                    <div class="accordion-item mb-3 border-0 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">
+                                <i class="bi bi-award me-2"></i> Reconocimientos
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#historiaAccordion">
+                            <div class="accordion-body">
+                                <div class="d-flex align-items-start mb-3">
+                                    <img src="mila3.jfif" alt="Premio" class="rounded me-3" width="60">
+                                    <div>
+                                        <h5>Mejor Milanesa 2022</h5>
+                                        <p class="mb-0">Reconocimiento otorgado por la Asociación de Gastronomía Porteña</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-start">
+                                    <img src="mila1.jfif" alt="Premio" class="rounded me-3" width="60">
+                                    <div>
+                                        <h5>Premio Tradición Familiar 2020</h5>
+                                        <p class="mb-0">Por mantener las recetas auténticas por más de 35 años</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ítem 4 - Expansión -->
+                    <div class="accordion-item mb-3 border-0 shadow-sm">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
+                                <i class="bi bi-gear-wide-connected me-2"></i> Nuestra Evolución
+                            </button>
+                        </h3>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#historiaAccordion">
+                            <div class="accordion-body">
+                                <p>De un pequeño local en San Telmo a un referente de la comida porteña:</p>
+                                <div class="timeline">
+                                    <div class="timeline-item">
+                                        <div class="timeline-year">1985</div>
+                                        <div class="timeline-content">Apertura del primer local en San Telmo</div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-year">1998</div>
+                                        <div class="timeline-content">Primera expansión al barrio de Palermo</div>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <div class="timeline-year">2015</div>
+                                        <div class="timeline-content">Inauguración de nuestra cocina central</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Sección de Opiniones -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <p class="lead text-muted">Más de 35 años dejando sonrisas y estómagos felices</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Opinión 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <img src="per.jfif" alt="Cliente" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <h5 class="mb-1">alexandramYJ</h5>
+                                <div class="text-warning mb-1">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                                                   </div>
+                                <small class="text-muted">Cliente frecuente</small>
+                            </div>
+                        </div>
+                        <p class="card-text">para sus precios sus milanesas vienen frias secas  sin sabor mejoren su calidad de sus productos"</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <small class="text-muted"><i class="bi bi-calendar me-1"></i> Visitado el 15/03/2023</small>
+                    </div>
+                </div>
+            </div>
+            <!-- Opinión 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <img src="per1.jfif" alt="Cliente" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <h5 class="mb-1">ruben dario</h5>
+                                <div class="text-warning mb-1">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                   i>
+                                </div>
+                                <small class="text-muted">Primera visita</small>
+                            </div>
+                        </div>
+                        <p class="card-text">secas grasosas y una atencion lamentable nunca mas vuelvo a ese lugar"</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <small class="text-muted"><i class="bi bi-calendar me-1"></i> Visitado el 22/02/2023</small>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Opinión 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <img src="per2.jfif" alt="Cliente" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <h5 class="mb-1">karen tarqui</h5>
+                                <div class="text-warning mb-1">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    
+                                </div>
+                                <small class="text-muted">Primera visita</small>
+                            </div>
+                        </div>
+                        <p class="card-text">muy seca y dura la milanesa de pollo"</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <small class="text-muted"><i class="bi bi-calendar me-1"></i> Visitado el 22/02/2023</small>
+                    </div>
+                </div>
+            </div>
+            <!-- Opinión 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <img src="per3.jfif" alt="Cliente" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <h5 class="mb-1">elias yagami</h5>
+                                <div class="text-warning mb-1">
+                                    <i class="bi bi-star-fill"></i>
+                                   
+                                </div>
+                                <small class="text-muted">Primera visita</small>
+                            </div>
+                        </div>
+                        <p class="card-text">lo peor que como en mi vida toda grasosa la salhipapa las papas duras y una presentacion lamentable</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <small class="text-muted"><i class="bi bi-calendar me-1"></i> Visitado el 22/02/2023</small>
+                    </div>
+                </div>
+            </div>
+            <!-- Opinión 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <img src="per4.jfif" alt="Cliente" class="rounded-circle me-3" width="60" height="60">
+                            <div>
+                                <h5 class="mb-1">xero blanco monterrey </h5>
+                                <div class="text-warning mb-1">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    
+                                    
+                                <small class="text-muted">Primera visita</small>
+                            </div>
+                        </div>
+                        <p class="card-text">
+                        
+                        me dieron todo su fideo guardado en mi plato y para el colmo frio y sin sabor a nada</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-top-0">
+                        <small class="text-muted"><i class="bi bi-calendar me-1"></i> Visitado el 22/02/2023</small>
+                    </div>
+                </div>
+            </div>
+
+
+
+        
+
+        <!-- Botón para dejar opinión -->
+        <div class="text-center mt-5">
+            <button class="btn btn-outline-warning rounded-pill px-4" data-bs-toggle="modal" data-bs-target="#opinionModal">
+                <i class="bi bi-pencil-square me-2"></i>Deja tu opinión
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Modal para opiniones -->
+<div class="modal fade" id="opinionModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title">Cuéntanos tu experiencia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="nombreOpinion" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombreOpinion" placeholder="Tu nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Calificación</label>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5"><label for="star5" class="bi bi-star-fill"></label>
+                            <input type="radio" id="star4" name="rating" value="4"><label for="star4" class="bi bi-star-fill"></label>
+                            <input type="radio" id="star3" name="rating" value="3"><label for="star3" class="bi bi-star-fill"></label>
+                            <input type="radio" id="star2" name="rating" value="2"><label for="star2" class="bi bi-star-fill"></label>
+                            <input type="radio" id="star1" name="rating" value="1"><label for="star1" class="bi bi-star-fill"></label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comentarioOpinion" class="form-label">Comentario</label>
+                        <textarea class="form-control" id="comentarioOpinion" rows="3" placeholder="¿Qué te pareció tu experiencia?"></textarea>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-warning">Enviar opinión</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Contacto -->
+    <section class="py-6 bg-light">
+        <div class="container">
+            <br> <br> <br><h2 class="text-center mb-5"> Contacto</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <h3 class="card-title">Información</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="bi bi-geo-alt-fill text-warning"></i> patio de comidas torres mall Av.arce La paz bolivia
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-telephone-fill text-warning"></i> +591 76774137
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="bi bi-clock-fill text-warning"></i> Lunes a Viernes: 10:00 - 22:00
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.330537391598!2d-68.12623782567358!3d-16.509402340965927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21aab4a5a8a7%3A0x4aa1a759fce5f996!2sDo%C3%B1a%20Milanesa!5e0!3m2!1sen!2sbo!4v1750039642903!5m2!1sen!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección Contador de Visitas -->
+
+
+    <!-- Aside con Artículo (nueva sección añadida) -->
+<aside class="container my-5">
+    <article class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm">
+        <div class="col-md-6 p-4 d-flex flex-column">
+            <strong class="d-inline-block mb-2 text-warning">Receta Tradicional</strong>
+            <h3 class="mb-3">El secreto de nuestras milanesas</h3>
+            <p class="card-text mb-auto">Descubre la historia detrás de nuestra receta familiar que ha conquistado Buenos Aires por más de 35 años.</p>
+            <div class="mt-3">
+                <a href="#" class="btn btn-outline-warning">Leer más</a>
+            </div>
+        </div>
+        <div class="col-md-6 d-none d-md-block">
+            <img src="Doñami1.jpg" class="img-fluid h-100" alt="Preparación de milanesas" style="object-fit: cover;">
+        </div>
+    </article>
+</aside>
+
+
+    <!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>Doña Milanesa</h5>
+                <p>Comida casera preparada con ingredientes frescos y técnicas tradicionales desde 1985.</p>
+                <div class="visitas-counter small text-muted mt-2">
+                      <i class="bi bi-eye-fill"></i> Esta página ha sido vista <span id="visitas-proyecto-final">0</span> veces
+                </div>
+            </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Horarios</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">Lunes a Viernes: 11:00 - 23:00</li>
+                        <li class="nav-item mb-2">Sábados y Domingos: 12:00 - 00:00</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Redes Sociales</h5>
+                    <div class="d-flex">
+                        <a href="#" class="me-2 text-white"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="bi bi-whatsapp fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <small class="text-muted">© 2023 Doña Milanesa. Todos los derechos reservados.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Online -->
+   
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    
+    <!-- Scripts integrados -->
+    <script>
+        // Inicializar carrusel con intervalo
+        const myCarousel = document.querySelector('#mainCarousel');
+        const carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 5000,
+            ride: true
+        });
+     document.addEventListener('DOMContentLoaded', function() {
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('mainSearchInput');
+    
+    // Función para remover resaltados anteriores
+    function removeHighlights() {
+        document.querySelectorAll('.search-highlight').forEach(el => {
+            // Reemplazamos solo el contenido, no todo el nodo
+            el.outerHTML = el.innerHTML;
+        });
+    }
+    
+    // Función para resaltar texto
+    function highlightText(element, searchTerm) {
+        const regex = new RegExp(searchTerm, 'gi');
+        
+        // Buscamos solo en nodos de texto
+        const walker = document.createTreeWalker(
+            element,
+            NodeFilter.SHOW_TEXT,
+            null,
+            false
+        );
+        
+        let node;
+        const textNodes = [];
+        
+        while (node = walker.nextNode()) {
+            if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '') {
+                textNodes.push(node);
+            }
+        }
+        
+        textNodes.forEach(node => {
+            const text = node.textContent;
+            if (regex.test(text)) {
+                const parent = node.parentNode;
+                if (parent.nodeName === 'SPAN' && parent.classList.contains('search-highlight')) {
+                    return; // Evitar procesar nodos ya resaltados
+                }
+                
+                const newHTML = text.replace(regex, 
+                    match => <span class="search-highlight">${match}</span>
+                );
+                
+                const temp = document.createElement('span');
+                temp.innerHTML = newHTML;
+                
+                // Reemplazar el nodo de texto con el nuevo contenido
+                parent.replaceChild(temp, node);
+                
+                // Desenvolver el span temporal
+                while (temp.firstChild) {
+                    parent.insertBefore(temp.firstChild, temp);
+                }
+                parent.removeChild(temp);
+            }
+        });
+    }
+    
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const searchTerm = searchInput.value.trim();
+        if (searchTerm === '') return;
+        
+        removeHighlights();
+        
+        highlightText(document.body, searchTerm);
+        
+        // Desplazarse al primer resultado
+        const firstMatch = document.querySelector('.search-highlight');
+        if (firstMatch) {
+            firstMatch.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        } else {
+            alert('No se encontraron resultados para: ' + searchTerm);
+        }
+    });
+});
+                // Mostrar toast de bienvenida al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            var welcomeToast = document.getElementById('welcomeToast');
+            if (welcomeToast) {
+                var toast = new bootstrap.Toast(welcomeToast);
+                toast.show();
+            }
+        });
+
+      </script>
+
+</body>
+</html>

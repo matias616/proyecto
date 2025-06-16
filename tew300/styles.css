@@ -1,0 +1,26 @@
+/* Fondo de la página de opiniones */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* Formulario */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón */
+.btn-danger {
+    font-size: 18px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+}

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Doña Milanesa</title>
+    <meta name="description" content="Nuestro menú completo de milanesas y platos tradicionales">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ffc107;
+            --secondary-color: #343a40;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding-top: 56px;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('milapro.jfif');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 3rem;
+        }
+        
+        .menu-category {
+            margin-bottom: 4rem;
+        }
+        
+        .menu-item {
+            margin-bottom: 2rem;
+            transition: transform 0.3s;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .menu-item-img {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .price-badge {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        .badge-veg {
+            background-color: #28a745;
+        }
+        
+        .badge-spicy {
+            background-color: #dc3545;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .footer {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (igual que en la página principal) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="helado2.jpg" alt="Doña Milanesa" width="40" class="me-2 rounded-circle">
+                <span>Doña <span class="text-warning">Milanesa</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item ms-lg-3">
+    <a class="nav-link" href="proyecto_final.html">
+        <i class="bi bi-cart3 me-1"></i>Inicio
+    </a>
+</li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="menu.html">
+                            <i class="bi bi-menu-button-wide me-1"></i>Menú
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">
+                            <i class="bi bi-book me-1"></i>Historia
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)">
+                            <i class="bi bi-telephone me-1"></i>Contacto
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-warning rounded-pill px-3" href="javascript:void(0)">
+                            <i class="bi bi-cart3 me-1"></i>Pedir Ahora
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Nuestro Menú</h1>
+            <p class="lead">Delicias tradicionales preparadas con amor</p>
+        </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <div class="container">
+        <!-- Milanesas -->
+        <section class="menu-category">
+            <h2 class="section-title">MENU COMPLETO</h2>
+            <div class="row">
+                <!-- Item 1 -->
+                <div class="col-md-6 col-lg-4 menu-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="napo.jpeg" class="card-img-top menu-item-img" alt="Milanesa Clásica">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="h5 mb-0">Milanesa napolitana</h3>
+                                <span class="badge price-badge">35 Bs</span>
+                            </div>
+                            <p class="card-text">Carne de res empanada con nuestra receta tradicional, acompañada de limón fresco y perejil.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-1">Popular</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-warning">Añadir al pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="col-md-6 col-lg-4 menu-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="cro.jpeg" class="card-img-top menu-item-img" alt="Milanesa Suiza">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="h5 mb-0">Milanesa crocante</h3>
+                                <span class="badge price-badge">40 Bs</span>
+                            </div>
+                            <p class="card-text">Milanesa clásica con papas fritas, ensalada,arroz de lo mejor</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-1">Recomendado</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-warning">Añadir al pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="col-md-6 col-lg-4 menu-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="trancapecho.jpeg" class="card-img-top menu-item-img" alt="Milanesa Napolitana">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="h5 mb-0">trancapecho</h3>
+                                <span class="badge price-badge">45 Bs</span>
+                            </div>
+                            <p class="card-text">nuestro delicioso trancapecho que lleva carne,huevo,cebolla.,tomate,locoto,arroz y pan</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-1">Especialidad</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-warning">Añadir al pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="col-md-6 col-lg-4 menu-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="salchipapa.jpeg" class="card-img-top menu-item-img" alt="Milanesa de Pollo">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="h5 mb-0">salchipapa</h3>
+                                <span class="badge price-badge">30 Bs</span>
+                            </div>
+                            <p class="card-text">nuestra deliciosa salchipapa acompañada de nuestras mejores papas fritas , salchicha de la mejor calidad.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-1">Liviana</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-warning">Añadir al pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 5 -->
+                <div class="col-md-6 col-lg-4 menu-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="salchipipoca.jpeg" class="card-img-top menu-item-img" alt="Milanesa Vegetariana">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="h5 mb-0">salchipipoca</h3>
+                                <span class="badge price-badge">38 Bs</span>
+                            </div>
+                            <p class="card-text">Deliciosa opción si deseas probar una combinacion de papas fritas,salchicha y pipocas de pollo.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge badge-veg text-white me-1">Vegetariana</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-warning">Añadir al pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 6 -->
+                <div class="col-md-6 col-lg-4 menu-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="hambur.jpeg" class="card-img-top menu-item-img" alt="Milanesa a la Parmesana">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="h5 mb-0">hamburguesa </h3>
+                                <span class="badge price-badge">42 Bs</span>
+                            </div>
+                            <p class="card-text">pan,carne,ensalada papas fritas,lechuga,tocino.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="badge bg-secondary me-1">Gratinada</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-warning">Añadir al pedido</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Acompañamientos -->
+        <section class="menu-category">
+            <h2 class="section-title">Acompañamientos</h2>
+            <div class="row">
+                <!-- Item 1 -->
+                <div class="col-md-6 col-lg-4 menu-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="papas.jfif" class="card-img-top menu-item-img" alt="Papas Fritas">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="h5 mb-0">Papas Fritas Clásicas</h3>
+                                <span class="badge price-badge">15 Bs</span>
+                            </div>
+                            <p class="card-text">Papas cortadas a mano y fritas al momento, con un toque de perejil y ajo.</p>
+                            <button class="btn btn-sm btn-outline-warning">Añadir al pedido</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="col-md-6 col-lg-4 menu-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="Ensalada.jfif" class="card-img-top menu-item-img" alt="Ensalada Mixta">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="h5 mb-0">Ensalada Mixta</h3>
+                                <span class="badge price-badge">18 Bs</span>
+                            </div>
+                            <p class="card-text">Lechuga, tomate, cebolla morada, zanahoria y aceitunas con aderezo a elección.</p>
+                            <div>
+                                <span class="badge badge-veg text-white me-1">Vegetariana</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline-warning mt-2">Añadir al pedido</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="col-md-6 col-lg-4 menu-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="pure.jfif" class="card-img-top menu-item-img" alt="Puré de Papas">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="h5 mb-0">Puré de Papas</h3>
+                                <span class="badge price-badge">16 Bs</span>
+                            </div>
+                            <p class="card-text">Cremoso puré de papas con leche, mantequilla y un toque de nuez moscada.</p>
+                            <button class="btn btn-sm btn-outline-warning">Añadir al pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bebidas -->
+        <section class="menu-category">
+            <h2 class="section-title">Bebidas</h2>
+            <div class="row">
+                <!-- Item 1 -->
+                <div class="col-md-6 col-lg-4 menu-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="gasa.jfif" class="card-img-top menu-item-img" alt="Gaseosas">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="h5 mb-0">Gaseosas</h3>
+                                <span class="badge price-badge">12 Bs</span>
+                            </div>
+                            <p class="card-text">Coca-Cola, Sprite, Fanta o agua tónica. 500ml.</p>
+                            <button class="btn btn-sm btn-outline-warning">Añadir al pedido</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="col-md-6 col-lg-4 menu-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="jugo.jfif" class="card-img-top menu-item-img" alt="Jugos Naturales">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="h5 mb-0">Jugos Naturales</h3>
+                                <span class="badge price-badge">15 Bs</span>
+                            </div>
+                            <p class="card-text">Naranja, limonada, frutilla o maracuyá. 500ml.</p>
+                            <div>
+                                <span class="badge badge-veg text-white me-1">Natural</span>
+                            </div>
+                            <button class="btn btn-sm btn-outline-warning mt-2">Añadir al pedido</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="col-md-6 col-lg-4 menu-item">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="cerve.jfif" class="card-img-top menu-item-img" alt="Cervezas">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h3 class="h5 mb-0">Cervezas Artesanales</h3>
+                                <span class="badge price-badge">25 Bs</span>
+                            </div>
+                            <p class="card-text">Rubia, roja o negra. Consultar por marcas disponibles.</p>
+                            <button class="btn btn-sm btn-outline-warning">Añadir al pedido</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Promociones -->
+        <section class="menu-category">
+            <h2 class="section-title">Promociones</h2>
+            <div class="row">
+                <!-- Promo 1 -->
+                <div class="col-md-6 menu-item">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="silpancho.jpeg" class="img-fluid rounded-start h-100" alt="Promo Familiar" style="object-fit: cover;">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h3 class="h5 mb-0">Promo silpanchera</h3>
+                                        <span class="badge bg-danger">30% OFF</span>
+                                    </div>
+                                    <p class="card-text">2 sipanchos a elección + 2 guarniciones grandes + 2bebidas.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <span class="text-muted text-decoration-line-through me-2">180 Bs</span>
+                                            <span class="badge price-badge">44 Bs</span>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-warning">Pedir ahora</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Promo 2 -->
+                <div class="col-md-6 menu-item">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <img src="promo1.jpeg" class="img-fluid rounded-start h-100" alt="Martes de Milanesas" style="object-fit: cover;">
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <h3 class="h5 mb-0">sandwiches junior</h3>
+                                        <span class="badge bg-danger">2x1</span>
+                                    </div>
+                                    <p class="card-text">2 sandwiches junior mas 2 guarnciones de de papas fritas + 2 refrescos.</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-muted">Válido solo los jueves</small>
+                                        <button class="btn btn-sm btn-outline-warning">Pedir ahora</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer (igual que en la página principal) -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Doña Milanesa</h5>
+                    <p>Comida casera preparada con ingredientes frescos y técnicas tradicionales desde 1985.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Horarios</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">Lunes a Viernes: 11:00 - 23:00</li>
+                        <li class="nav-item mb-2">Sábados y Domingos: 12:00 - 00:00</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Redes Sociales</h5>
+                    <div class="d-flex">
+                        <a href="#" class="me-2 text-white"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="bi bi-whatsapp fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <small class="text-muted">© 2023 Doña Milanesa. Todos los derechos reservados.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

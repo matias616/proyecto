@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Doña Milanesa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        .contact-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('milapro.jfif');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+        }
+        .contact-card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .contact-card:hover {
+            transform: translateY(-10px);
+        }
+        .form-control:focus {
+            border-color: #ffc107;
+            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+        }
+        .btn-warning {
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar (igual que en la página principal) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="helado2.jpg" alt="Doña Milanesa" width="40" class="me-2 rounded-circle">
+                <span>Doña <span class="text-warning">Milanesa</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item ms-lg-3">
+    <a class="nav-link" href="proyecto_final.html">
+        <i class="bi bi-cart3 me-1"></i>Inicio
+    </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#menu">
+                            <i class="bi bi-menu-button-wide me-1"></i>Menú
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#historia">
+                            <i class="bi bi-book me-1"></i>Historia
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">
+                            <i class="bi bi-telephone me-1"></i>Contacto
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-warning rounded-pill px-3" href="index.html#pedidos">
+                            <i class="bi bi-cart3 me-1"></i>Pedir Ahora
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="contact-hero d-flex align-items-center justify-content-center text-white">
+        <div class="text-center">
+            <h1 class="display-4 fw-bold">Contáctanos</h1>
+            <p class="lead">Estamos aquí para responder todas tus preguntas</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card contact-card h-100 py-4">
+                        <div class="card-body text-center">
+                            <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                                <i class="bi bi-geo-alt-fill text-warning fs-3"></i>
+                            </div>
+                            <h3>Dirección</h3>
+                            <p class="text-muted">patio de comidas torres mall Av.arce La paz bolivia</p>
+                            <a href="#mapa" class="btn btn-outline-warning">Ver en mapa</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card contact-card h-100 py-4">
+                        <div class="card-body text-center">
+                            <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                                <i class="bi bi-telephone-fill text-warning fs-3"></i>
+                            </div>
+                            <h3>Teléfono</h3>
+                            <p class="text-muted">+591 76774137<br>Lunes a Domingo: 11am - 11pm</p>
+                            <a href="tel:+541112345678" class="btn btn-outline-warning">Llamar ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card contact-card h-100 py-4">
+                        <div class="card-body text-center">
+                            <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                                <i class="bi bi-envelope-fill text-warning fs-3"></i>
+                            </div>
+                            <h3>instagram</h3>
+                            <p class="text-muted">donamilanesa.bo</p>
+                            <a href="#formulario" class="btn btn-outline-warning">Enviar mensaje</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="formulario" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm border-0">
+                        <div class="card-body p-5">
+                            <h2 class="text-center mb-4">Envíanos un mensaje</h2>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="nombre" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="apellido" class="form-label">Apellido</label>
+                                        <input type="text" class="form-control" id="apellido" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="telefono" class="form-label">Teléfono</label>
+                                        <input type="tel" class="form-control" id="telefono">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="asunto" class="form-label">Asunto</label>
+                                        <select class="form-select" id="asunto">
+                                            <option selected>Seleccione un asunto</option>
+                                            <option>Consulta general</option>
+                                            <option>Reservas</option>
+                                            <option>Eventos privados</option>
+                                            <option>Quejas o sugerencias</option>
+                                            <option>Trabaja con nosotros</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="mensaje" class="form-label">Mensaje</label>
+                                        <textarea class="form-control" id="mensaje" rows="5" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="newsletter">
+                                            <label class="form-check-label" for="newsletter">
+                                                Suscribirme al newsletter
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center mt-3">
+                                        <button type="submit" class="btn btn-warning px-4 py-2">Enviar mensaje</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="mapa" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Encuéntranos</h2>
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden shadow">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.330537391598!2d-68.12623782567358!3d-16.509402340965927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f21aab4a5a8a7%3A0x4aa1a759fce5f996!2sDo%C3%B1a%20Milanesa!5e0!3m2!1sen!2sbo!4v1750039642903!5m2!1sen!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Preguntas frecuentes</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item mb-3 border-0 shadow-sm">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            ¿Hacen entregas a domicilio?
+                        </button>
+                    </h3>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, realizamos entregas a domicilio en un radio de 5km alrededor de nuestro local. También trabajamos con las principales plataformas de delivery como PedidosYa y Rappi.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-3 border-0 shadow-sm">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            ¿Aceptan reservas para grupos grandes?
+                        </button>
+                    </h3>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, aceptamos reservas para grupos de hasta 30 personas. Para grupos mayores o eventos privados, por favor contáctenos con al menos 48 horas de anticipación.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-3 border-0 shadow-sm">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            ¿Tienen opciones vegetarianas o veganas?
+                        </button>
+                    </h3>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sí, ofrecemos milanesas de berenjena, soja y seitán, además de una variedad de guarniciones vegetarianas. Algunas de estas opciones también son veganas.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-3 border-0 shadow-sm">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            ¿Cuál es el horario de atención?
+                        </button>
+                    </h3>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Nuestro horario de atención es de lunes a viernes de 10:00 a 22:00, y los 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (igual que en la página principal) -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Doña Milanesa</h5>
+                    <p>Comida casera preparada con ingredientes frescos y técnicas tradicionales desde 1985.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Horarios</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">Lunes a Viernes: 11:00 - 23:00</li>
+                        <li class="nav-item mb-2">Sábados y Domingos: 12:00 - 00:00</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Redes Sociales</h5>
+                    <div class="d-flex">
+                        <a href="#" class="me-2 text-white"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="me-2 text-white"><i class="bi bi-whatsapp fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <small class="text-muted">© 2023 Doña Milanesa. Todos los derechos reservados.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

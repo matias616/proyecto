@@ -1,0 +1,58 @@
+/* Estilos personalizados */
+body {
+    padding-top: 56px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar scroll */
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hero carousel */
+.hero-carousel .carousel-item {
+    height: 80vh;
+    min-height: 400px;
+}
+
+.hero-carousel .carousel-caption {
+    bottom: 30%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Cards especialidades */
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Acordeón historia */
+.accordion-button:not(.collapsed) {
+    background-color: rgba(230, 126, 34, 0.1);
+    color: #E67E22;
+}
+
+/* Contacto */
+.list-group-item {
+    border-left: none;
+    border-right: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-carousel .carousel-item {
+        height: 60vh;
+    }
+    
+    .hero-carousel .carousel-caption {
+        bottom: 20%;
+    }
+}
